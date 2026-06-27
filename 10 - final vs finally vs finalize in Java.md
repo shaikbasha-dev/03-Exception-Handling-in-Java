@@ -1,8 +1,8 @@
-10 - final vs finally vs finalize in Java
+# 10 - final vs finally vs finalize in Java
 
-============================================================
+
 1. Introduction
-============================================================
+
 In Java, final, finally, and finalize sound similar, but they are completely different concepts.
 They are used in different situations and have different meanings.
 
@@ -18,7 +18,7 @@ Uses of final:
 - final class: class cannot be inherited
 
 Example:
-final int x = 10;
+final int x  10;
 
 Important point:
 final is related to declarations and restrictions.
@@ -73,20 +73,20 @@ finalize             Cleanup before garbage collection   objects          Old-st
 ------------------------------------------------------------
 6. Simple Comparison
 ------------------------------------------------------------
-- final = constant / restriction
-- finally = cleanup block after try-catch
-- finalize = garbage collector hook (old concept)
+- final  constant / restriction
+- finally  cleanup block after try-catch
+- finalize  garbage collector hook (old concept)
 
 ------------------------------------------------------------
 7. Program Example
-============================================================
+
 Program:
 public class FinalFinallyFinalizeExample {
     public static void main(String[] args) {
-        final int x = 10;
+        final int x  10;
 
         try {
-            int result = 100 / 2;
+            int result  100 / 2;
             System.out.println(result);
         } catch (Exception e) {
             System.out.println("Error");
