@@ -1,8 +1,8 @@
-11 - Checked and Unchecked Exceptions in Java
+# 11 - Checked and Unchecked Exceptions in Java
 
-============================================================
+
 1. Introduction
-============================================================
+
 In Java, exceptions are divided into two main categories:
 - Checked Exceptions
 - Unchecked Exceptions
@@ -64,7 +64,7 @@ Unchecked Exceptions:
 
 ------------------------------------------------------------
 5. Program 1: Checked Exception Example
-============================================================
+
 Headline:
 Handling Checked Exception
 
@@ -74,7 +74,7 @@ import java.io.*;
 public class CheckedExceptionExample {
     public static void main(String[] args) {
         try {
-            FileReader file = new FileReader("demo.txt");
+            FileReader file  new FileReader("demo.txt");
             System.out.println("File opened successfully.");
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
@@ -95,18 +95,18 @@ Error: demo.txt (The system cannot find the file specified)
 
 ------------------------------------------------------------
 6. Program 2: Unchecked Exception Example
-============================================================
+
 Headline:
 Handling Unchecked Exception
 
 Program:
 public class UncheckedExceptionExample {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 0;
+        int a  10;
+        int b  0;
 
         try {
-            int result = a / b;
+            int result  a / b;
             System.out.println(result);
         } catch (ArithmeticException e) {
             System.out.println("Cannot divide by zero.");
@@ -132,7 +132,7 @@ Cannot divide by zero.
 
 ------------------------------------------------------------
 8. Conclusion
-============================================================
+
 Checked and unchecked exceptions are important parts of Java exception handling.
 Checked exceptions are forced to be handled, while unchecked exceptions are usually due to coding mistakes.
 Understanding both helps developers write safer and more reliable Java programs.
