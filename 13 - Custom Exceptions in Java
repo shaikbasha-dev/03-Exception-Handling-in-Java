@@ -1,8 +1,8 @@
 13 - Custom Exceptions in Java
 
-============================================================
+
 1. Introduction
-============================================================
+
 A custom exception is an exception created by the programmer.
 It is used when built-in exceptions do not clearly describe a specific problem in the program.
 
@@ -31,7 +31,7 @@ class MyException extends Exception {
 
 ------------------------------------------------------------
 4. Program Example
-============================================================
+
 Headline:
 Creating and Using a Custom Exception
 
@@ -78,6 +78,6 @@ Exception caught: Age must be 18 or above.
 
 ------------------------------------------------------------
 6. Conclusion
-============================================================
+
 Custom exceptions help make Java programs more expressive and easier to understand.
 They allow developers to describe problems in a way that matches the business logic of the application.
