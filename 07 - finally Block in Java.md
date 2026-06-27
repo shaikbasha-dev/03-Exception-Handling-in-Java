@@ -1,8 +1,8 @@
-07 - finally Block in Java
+# 07 - finally Block in Java
 
-============================================================
+
 1. Definition
-============================================================
+
 The finally block is a block of code that is executed regardless of whether an exception occurs or not.
 It is usually used for cleanup activities such as closing files, releasing resources, or closing database connections.
 
@@ -37,9 +37,9 @@ BEGIN
         cleanup code
 END
 
-============================================================
+
 4. Program 1: finally Block with Division by Zero
-============================================================
+
 Headline:
 Using finally to Ensure Cleanup Code Runs
 
@@ -55,9 +55,9 @@ Program:
 public class FinallyExample1 {
     public static void main(String[] args) {
         try {
-            int a = 10;
-            int b = 0;
-            int result = a / b;
+            int a  10;
+            int b  0;
+            int result  a / b;
             System.out.println(result);
         } catch (ArithmeticException e) {
             System.out.println("Error: Division by zero is not allowed.");
@@ -77,13 +77,13 @@ Line 2:     public static void main(String[] args) {
 Line 3:         try {
 - Starts the try block.
 
-Line 4:             int a = 10;
+Line 4:             int a  10;
 - Declares variable a with value 10.
 
-Line 5:             int b = 0;
+Line 5:             int b  0;
 - Declares variable b with value 0.
 
-Line 6:             int result = a / b;
+Line 6:             int result  a / b;
 - Tries to divide by zero, which causes an exception.
 
 Line 7:             System.out.println(result);
@@ -114,9 +114,9 @@ Comments for every line:
 public class FinallyExample1 {   // Declares class name
     public static void main(String[] args) {   // Program starts here
         try {   // Starts risky code block
-            int a = 10;   // Stores first number
-            int b = 0;    // Stores second number
-            int result = a / b;   // Division by zero may throw exception
+            int a  10;   // Stores first number
+            int b  0;    // Stores second number
+            int result  a / b;   // Division by zero may throw exception
             System.out.println(result);   // Prints result if division succeeds
         } catch (ArithmeticException e) {   // Handles arithmetic error
             System.out.println("Error: Division by zero is not allowed.");   // Shows friendly error message
@@ -134,9 +134,9 @@ Summary:
 This program proves that the finally block runs even after an exception is caught.
 It is useful for cleanup actions that must happen every time.
 
-============================================================
+
 5. Program 2: finally Block Without Exception
-============================================================
+
 Headline:
 Checking That finally Runs Even When No Error Occurs
 
@@ -152,9 +152,9 @@ Program:
 public class FinallyExample2 {
     public static void main(String[] args) {
         try {
-            int a = 10;
-            int b = 5;
-            int result = a / b;
+            int a  10;
+            int b  5;
+            int result  a / b;
             System.out.println("Result: " + result);
         } catch (ArithmeticException e) {
             System.out.println("Error: Division by zero is not allowed.");
@@ -173,9 +173,9 @@ Comments for every line:
 public class FinallyExample2 {   // Declares class
     public static void main(String[] args) {   // Program starts here
         try {   // Starts code that may fail
-            int a = 10;   // First number
-            int b = 5;    // Second number
-            int result = a / b;   // Valid division
+            int a  10;   // First number
+            int b  5;    // Second number
+            int result  a / b;   // Valid division
             System.out.println("Result: " + result);   // Prints result
         } catch (ArithmeticException e) {   // Handles arithmetic issue if any
             System.out.println("Error: Division by zero is not allowed.");   // Not executed in this case
@@ -193,9 +193,9 @@ Summary:
 This example shows that finally runs even when the program does not encounter any exception.
 It confirms that finally is executed after the try block completes successfully.
 
-============================================================
+
 6. Program 3: finally Block with Resource Cleanup (Conceptual)
-============================================================
+
 Headline:
 Using finally for Resource Cleanup
 
@@ -210,17 +210,17 @@ Why this program is important:
 Program:
 public class FinallyExample3 {
     public static void main(String[] args) {
-        java.io.BufferedReader reader = null;
+        java.io.BufferedReader reader  null;
 
         try {
-            reader = new java.io.BufferedReader(new java.io.FileReader("data.txt"));
-            String line = reader.readLine();
+            reader  new java.io.BufferedReader(new java.io.FileReader("data.txt"));
+            String line  reader.readLine();
             System.out.println(line);
         } catch (Exception e) {
             System.out.println("Error while reading file.");
         } finally {
             try {
-                if (reader != null) {
+                if (reader ! null) {
                     reader.close();
                 }
             } catch (Exception e) {
@@ -240,17 +240,17 @@ Line-by-line explanation:
 Comments for every line:
 public class FinallyExample3 {   // Declares class
     public static void main(String[] args) {   // Program starts here
-        java.io.BufferedReader reader = null;   // Declares reader and sets to null
+        java.io.BufferedReader reader  null;   // Declares reader and sets to null
 
         try {   // Starts risky file-reading code
-            reader = new java.io.BufferedReader(new java.io.FileReader("data.txt"));   // Opens file
-            String line = reader.readLine();   // Reads first line
+            reader  new java.io.BufferedReader(new java.io.FileReader("data.txt"));   // Opens file
+            String line  reader.readLine();   // Reads first line
             System.out.println(line);   // Prints the line
         } catch (Exception e) {   // Handles file-related errors
             System.out.println("Error while reading file.");   // Displays error message
         } finally {   // Runs after try/catch to close resources
             try {   // Tries to close file safely
-                if (reader != null) {   // Checks if file is open
+                if (reader ! null) {   // Checks if file is open
                     reader.close();   // Closes the file
                 }
             } catch (Exception e) {   // Handles closing error
@@ -271,8 +271,8 @@ Summary:
 This example shows the real-world purpose of finally.
 It ensures that resources are closed properly, even when exceptions occur.
 
-============================================================
+
 7. Conclusion
-============================================================
+
 The finally block is one of the most important parts of Java exception handling.
 It guarantees that cleanup code runs, which helps make programs more reliable, professional, and safe.
