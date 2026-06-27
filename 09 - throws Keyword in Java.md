@@ -1,8 +1,8 @@
-09 - throws Keyword in Java
+# 09 - throws Keyword in Java
 
-============================================================
+
 1. Definition
-============================================================
+
 The throws keyword is used in a method declaration to indicate that the method may throw one or more exceptions.
 It tells the caller that the method is not handling the exception itself and that the caller must handle it.
 
@@ -40,7 +40,7 @@ returnType methodName() throws ExceptionType1, ExceptionType2 {
 
 ------------------------------------------------------------
 4. Program 1: Using throws with a Checked Exception
-============================================================
+
 Headline:
 Declaring Exceptions with throws
 
@@ -65,7 +65,7 @@ public class ThrowsExample1 {
     }
 
     static void readFile() throws IOException {
-        FileReader file = new FileReader("data.txt");
+        FileReader file  new FileReader("data.txt");
         System.out.println("File opened successfully.");
         file.close();
     }
@@ -91,7 +91,7 @@ public class ThrowsExample1 {   // Declares class
     }
 
     static void readFile() throws IOException {   // Declares possible IOException
-        FileReader file = new FileReader("data.txt");   // Tries to open file
+        FileReader file  new FileReader("data.txt");   // Tries to open file
         System.out.println("File opened successfully.");   // Prints success message
         file.close();   // Closes the file
     }
@@ -107,9 +107,9 @@ Error while reading file: data.txt (The system cannot find the file specified)
 Summary:
 This example shows that throws is used to declare checked exceptions so that the caller can handle them.
 
-============================================================
+
 5. Program 2: throws with Multiple Exceptions
-============================================================
+
 Headline:
 Declaring More Than One Exception Type
 
@@ -136,9 +136,9 @@ public class ThrowsExample2 {
     }
 
     static void testMethod() throws IOException, ArithmeticException {
-        int a = 10;
-        int b = 0;
-        int result = a / b;
+        int a  10;
+        int b  0;
+        int result  a / b;
         System.out.println(result);
     }
 }
@@ -163,9 +163,9 @@ public class ThrowsExample2 {   // Declares class
     }
 
     static void testMethod() throws IOException, ArithmeticException {   // Declares two possible exceptions
-        int a = 10;   // First number
-        int b = 0;    // Second number
-        int result = a / b;   // Division by zero may throw exception
+        int a  10;   // First number
+        int b  0;    // Second number
+        int result  a / b;   // Division by zero may throw exception
         System.out.println(result);   // Prints result if no exception
     }
 }
@@ -176,9 +176,9 @@ ArithmeticException handled.
 Summary:
 This example shows that throws can list multiple exceptions that a method may cause.
 
-============================================================
+
 6. Important Points About throws
-============================================================
+
 - throws is used in the method declaration.
 - It is used for checked exceptions.
 - It tells the caller to handle the exception.
@@ -187,7 +187,7 @@ This example shows that throws can list multiple exceptions that a method may ca
 
 ------------------------------------------------------------
 7. Conclusion
-============================================================
+
 The throws keyword is important in Java exception handling.
 It informs the caller that a method may cause an exception and that the caller should handle it properly.
 Using throws correctly makes Java programs more reliable and easier to understand.
