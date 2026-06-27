@@ -1,8 +1,8 @@
-05 - try-catch Block in Exception Handling in Java
+# 05 - try-catch Block in Exception Handling in Java
 
-============================================================
+
 1. Definition
-============================================================
+
 A try-catch block is a Java mechanism used to handle exceptions during program execution.
 It allows the programmer to write code that may fail inside the try block and define a recovery strategy inside the catch block.
 
@@ -35,9 +35,9 @@ BEGIN
     END TRY-CATCH
 END
 
-============================================================
+
 4. Program 1: Basic try-catch Example
-============================================================
+
 Headline:
 Handling Division by Zero Using try-catch
 
@@ -52,11 +52,11 @@ Why this program is important:
 Program:
 public class TryCatchExample1 {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 0;
+        int a  10;
+        int b  0;
 
         try {
-            int result = a / b;
+            int result  a / b;
             System.out.println("Result: " + result);
         } catch (ArithmeticException e) {
             System.out.println("Error: Cannot divide by zero.");
@@ -74,11 +74,11 @@ Line 2:     public static void main(String[] args) {
 - This is the starting point of the program.
 - String[] args stores command-line inputs.
 
-Line 3:         int a = 10;
+Line 3:         int a  10;
 - Declares an integer variable a and stores 10.
 - This is the numerator.
 
-Line 4:         int b = 0;
+Line 4:         int b  0;
 - Declares an integer variable b and stores 0.
 - This is the denominator.
 
@@ -86,7 +86,7 @@ Line 5:         try {
 - Starts a try block.
 - Code inside this block may throw an exception.
 
-Line 6:             int result = a / b;
+Line 6:             int result  a / b;
 - Tries to divide a by b.
 - Since b is 0, this causes ArithmeticException.
 
@@ -114,11 +114,11 @@ Line 12: }
 Comments for every line of code:
 public class TryCatchExample1 {   // Declares the class name
     public static void main(String[] args) {   // Main method starts execution here
-        int a = 10;   // Stores first number
-        int b = 0;    // Stores second number
+        int a  10;   // Stores first number
+        int b  0;    // Stores second number
 
         try {   // Starts block where exception may occur
-            int result = a / b;   // Attempts division; may throw exception
+            int result  a / b;   // Attempts division; may throw exception
             System.out.println("Result: " + result);   // Prints result if no exception
         } catch (ArithmeticException e) {   // Handles arithmetic error
             System.out.println("Error: Cannot divide by zero.");   // Shows user-friendly message
@@ -133,9 +133,9 @@ Summary:
 This program shows that Java can handle runtime errors without stopping the entire application.
 It uses a try block to protect risky code and a catch block to respond to the error.
 
-============================================================
+
 5. Program 2: try-catch with Multiple Statements
-============================================================
+
 Headline:
 Handling More Than One Risky Operation in a try Block
 
@@ -150,7 +150,7 @@ Why this program is important:
 Program:
 public class TryCatchExample2 {
     public static void main(String[] args) {
-        int[] numbers = {10, 20, 30};
+        int[] numbers  {10, 20, 30};
 
         try {
             System.out.println(numbers[0]);
@@ -180,7 +180,7 @@ Line-by-line explanation:
 Comments for every line:
 public class TryCatchExample2 {   // Declares class
     public static void main(String[] args) {   // Entry point
-        int[] numbers = {10, 20, 30};   // Array with 3 valid positions
+        int[] numbers  {10, 20, 30};   // Array with 3 valid positions
 
         try {   // Start risky code section
             System.out.println(numbers[0]);   // Prints first element
@@ -200,9 +200,9 @@ Summary:
 This program shows how try-catch can handle errors caused by invalid array access.
 It also shows that after an exception, the remaining statements in the try block are skipped.
 
-============================================================
+
 6. Program 3: try-catch with User Input
-============================================================
+
 Headline:
 Handling Invalid Input Using try-catch
 
@@ -219,11 +219,11 @@ import java.util.Scanner;
 
 public class TryCatchExample3 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input  new Scanner(System.in);
 
         try {
             System.out.print("Enter a number: ");
-            int number = input.nextInt();
+            int number  input.nextInt();
             System.out.println("You entered: " + number);
         } catch (Exception e) {
             System.out.println("Please enter a valid integer.");
@@ -248,11 +248,11 @@ import java.util.Scanner;   // Imports Scanner to read keyboard input
 
 public class TryCatchExample3 {   // Declares the class
     public static void main(String[] args) {   // Program starts here
-        Scanner input = new Scanner(System.in);   // Creates scanner object
+        Scanner input  new Scanner(System.in);   // Creates scanner object
 
         try {   // Starts risky code section
             System.out.print("Enter a number: ");   // Shows prompt
-            int number = input.nextInt();   // Reads integer; may throw exception
+            int number  input.nextInt();   // Reads integer; may throw exception
             System.out.println("You entered: " + number);   // Prints valid input
         } catch (Exception e) {   // Handles any exception
             System.out.println("Please enter a valid integer.");   // Shows message for invalid input
@@ -273,9 +273,9 @@ Summary:
 This program shows how try-catch helps with user input validation.
 It protects the application from unexpected input and improves interaction quality.
 
-============================================================
+
 7. Conclusion
-============================================================
+
 The try-catch block is one of the most important concepts in Java exception handling.
 It allows developers to manage problems safely and keep applications running.
 A good understanding of try-catch is essential for writing professional Java programs.
