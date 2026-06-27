@@ -1,8 +1,8 @@
-06 - Multiple Catch Block in Java
+# 06 - Multiple Catch Block in Java
 
-============================================================
+
 1. Definition
-============================================================
+
 A multiple catch block means using more than one catch block after a single try block.
 It is used when different types of exceptions may occur in the same risky code.
 
@@ -37,9 +37,9 @@ BEGIN
         handle remaining cases
 END
 
-============================================================
+
 4. Program 1: Multiple Catch Blocks for Different Exceptions
-============================================================
+
 Headline:
 Handling Different Exceptions Using Multiple catch Blocks
 
@@ -55,12 +55,12 @@ Program:
 public class MultipleCatchExample1 {
     public static void main(String[] args) {
         try {
-            int a = 10;
-            int b = 0;
-            int result = a / b;
+            int a  10;
+            int b  0;
+            int result  a / b;
             System.out.println(result);
 
-            int[] numbers = {1, 2, 3};
+            int[] numbers  {1, 2, 3};
             System.out.println(numbers[5]);
         } catch (ArithmeticException e) {
             System.out.println("Error: Cannot divide by zero.");
@@ -80,13 +80,13 @@ Line 2:     public static void main(String[] args) {
 Line 3:         try {
 - Begins the try block.
 
-Line 4:             int a = 10;
+Line 4:             int a  10;
 - Declares a variable a with value 10.
 
-Line 5:             int b = 0;
+Line 5:             int b  0;
 - Declares b with value 0.
 
-Line 6:             int result = a / b;
+Line 6:             int result  a / b;
 - Attempts division by zero, which throws ArithmeticException.
 
 Line 7:             System.out.println(result);
@@ -95,7 +95,7 @@ Line 7:             System.out.println(result);
 Line 8: 
 - Blank line for readability.
 
-Line 9:             int[] numbers = {1, 2, 3};
+Line 9:             int[] numbers  {1, 2, 3};
 - Creates an array of size 3.
 
 Line 10:             System.out.println(numbers[5]);
@@ -126,12 +126,12 @@ Comments for every line:
 public class MultipleCatchExample1 {   // Declares the class name
     public static void main(String[] args) {   // Starts the program execution
         try {   // Begins the block that may throw exceptions
-            int a = 10;   // Stores first number
-            int b = 0;    // Stores second number
-            int result = a / b;   // Division by zero may throw ArithmeticException
+            int a  10;   // Stores first number
+            int b  0;    // Stores second number
+            int result  a / b;   // Division by zero may throw ArithmeticException
             System.out.println(result);   // Prints result if division works
 
-            int[] numbers = {1, 2, 3};   // Creates array with 3 elements
+            int[] numbers  {1, 2, 3};   // Creates array with 3 elements
             System.out.println(numbers[5]);   // Accessing index 5 may throw exception
         } catch (ArithmeticException e) {   // Handles division by zero issues
             System.out.println("Error: Cannot divide by zero.");   // Prints correct message
@@ -148,9 +148,9 @@ Summary:
 This program shows how more than one exception can be handled separately.
 The first catch is used for arithmetic problems, and the second handles array issues.
 
-============================================================
+
 5. Program 2: Multiple Catch Blocks with User Input
-============================================================
+
 Headline:
 Handling Different Input Errors Using Multiple Catch Blocks
 
@@ -168,16 +168,16 @@ import java.util.Scanner;
 
 public class MultipleCatchExample2 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan  new Scanner(System.in);
 
         try {
             System.out.print("Enter first number: ");
-            int num1 = scan.nextInt();
+            int num1  scan.nextInt();
 
             System.out.print("Enter second number: ");
-            int num2 = scan.nextInt();
+            int num2  scan.nextInt();
 
-            int result = num1 / num2;
+            int result  num1 / num2;
             System.out.println("Result: " + result);
         } catch (InputMismatchException e) {
             System.out.println("Error: Please enter only integers.");
@@ -202,16 +202,16 @@ import java.util.Scanner;   // Imports scanner for taking user input
 
 public class MultipleCatchExample2 {   // Declares class
     public static void main(String[] args) {   // Program starts here
-        Scanner scan = new Scanner(System.in);   // Creates scanner object
+        Scanner scan  new Scanner(System.in);   // Creates scanner object
 
         try {   // Starts risky code block
             System.out.print("Enter first number: ");   // Prompts user for first number
-            int num1 = scan.nextInt();   // Reads first number; may throw InputMismatchException
+            int num1  scan.nextInt();   // Reads first number; may throw InputMismatchException
 
             System.out.print("Enter second number: ");   // Prompts for second number
-            int num2 = scan.nextInt();   // Reads second number; may throw InputMismatchException
+            int num2  scan.nextInt();   // Reads second number; may throw InputMismatchException
 
-            int result = num1 / num2;   // Division may throw ArithmeticException
+            int result  num1 / num2;   // Division may throw ArithmeticException
             System.out.println("Result: " + result);   // Prints result if valid
         } catch (InputMismatchException e) {   // Handles invalid non-integer input
             System.out.println("Error: Please enter only integers.");   // Shows message
@@ -232,9 +232,9 @@ Summary:
 This program shows how multiple catch blocks can handle different input-related problems.
 It is useful in programs where user input may be invalid or unsafe.
 
-============================================================
+
 6. Conclusion
-============================================================
+
 Multiple catch blocks are useful when a single try block can throw different types of exceptions.
 They allow developers to respond to each problem in a more accurate and professional way.
 Using multiple catch blocks makes Java programs easier to understand, maintain, and debug.
