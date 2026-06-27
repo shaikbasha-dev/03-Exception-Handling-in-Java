@@ -1,4 +1,4 @@
-03 - Exception Handling Introduction in Java
+# 03 - Exception Handling Introduction in Java
 
 What is Exception Handling?
 - Exception handling is a way to handle runtime errors so that the program does not stop unexpectedly.
