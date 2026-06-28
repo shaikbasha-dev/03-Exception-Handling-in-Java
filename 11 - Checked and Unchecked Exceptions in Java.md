@@ -74,7 +74,7 @@ import java.io.*;
 public class CheckedExceptionExample {
     public static void main(String[] args) {
         try {
-            FileReader file  new FileReader("demo.txt");
+            FileReader file = new FileReader("demo.txt");
             System.out.println("File opened successfully.");
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
@@ -102,11 +102,11 @@ Handling Unchecked Exception
 Program:
 public class UncheckedExceptionExample {
     public static void main(String[] args) {
-        int a  10;
-        int b  0;
+        int a = 10;
+        int b = 0;
 
         try {
-            int result  a / b;
+            int result = a / b;
             System.out.println(result);
         } catch (ArithmeticException e) {
             System.out.println("Cannot divide by zero.");
